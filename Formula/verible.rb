@@ -12,6 +12,11 @@ class Verible < Formula
   depends_on :macos
 
   def install
+    test_bazel_version = "7.7.2" # set this to brew verison of bazel
+    `sed -i '' 's/7.6.0/#{test_bazel_version}/g' .bazelversion`
+    `sed -i '' 's/7.6.1/#{test_bazel_version}/g' .github/settings.sh`
+    `sed -i '' 's/7.6.0/#{test_bazel_version}/g' .github/workflows/verible-ci.yml`
+
     bazel_args = []
     bazel_args << "--jobs=#{ENV.make_jobs}"
     bazel_args << "--compilation_mode=opt"
