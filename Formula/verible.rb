@@ -3,7 +3,7 @@ class Verible < Formula
   homepage "https://github.com/chipsalliance/verible"
   version "0.0-4298-g085eef05"
   sha256 "260ff58d63188e175d2f63be2823a65dcea21383ee4a83f370fd3e1b05f0e977"
-  url "https://github.com/chipsalliance/verible/releases/download/v#{version}/verible-v#{version}-macOS.tar.gz",
+  url "https://github.com/chipsalliance/verible/releases/download/v#{version}/verible-v#{version}-macOS.tar.gz"
   license "Apache-2.0"
 
   depends_on :macos
